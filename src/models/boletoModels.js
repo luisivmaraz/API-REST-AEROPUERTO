@@ -8,9 +8,9 @@ const boletoSchema = new Schema({
     },
     nombre:String,
     apellidos:String,
-    aerolinea:Number,
+    aerolinea:String,
     equipaje_permitido:Number,
-    Origen:String,
+    origen:String,
     destino:String,
     costo:Number
 },{
@@ -21,3 +21,7 @@ const boletoSchema = new Schema({
 )
 
 export default model('boleto', boletoSchema);
+
+
+
+

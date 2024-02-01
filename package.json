@@ -1,0 +1,15 @@
+{
+  "name": "api-rest-aeropuerto",
+  "version": "1.0.0",
+  "description": "API REST para examen de la unidad 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "luisivmaraz"
+  },
+  "author": "Luis Marquez",
+  "license": "ISC"
+}

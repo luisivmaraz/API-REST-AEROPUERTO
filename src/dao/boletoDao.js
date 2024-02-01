@@ -36,10 +36,14 @@ boletoDAO.updateBoleto=async(folioboleto,boleto)=>{        // Actualizar boleto
     
 }
 
-
-
-
-
+boletoDAO.deleteBoleto=async(folioboleto)=>{                       //borra4r boleto
+    const boletoBorrado=await Boleto.findOneAndDelete({folio:folioboleto})
+    if(boletoBorrado!=null){
+        return true
+    }else{
+        return false
+    }
+}
 
 
 

@@ -11,5 +11,10 @@
     "url": "luisivmaraz"
   },
   "author": "Luis Marquez",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "node": "^21.6.1",
+    "nodemon": "^3.0.3"
+  }
 }

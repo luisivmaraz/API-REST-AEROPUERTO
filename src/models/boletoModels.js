@@ -1,18 +1,19 @@
 import { Schema,model } from "mongoose";
 
 const boletoSchema = new Schema({
-    folio:{
+    clave:{
         type:String,
         unique:true,
         required:true
     },
     nombre:String,
-    apellidos:String,
+    apellido:String,
     aerolinea:String,
     equipaje_permitido:Number,
     origen:String,
     destino:String,
-    costo:Number
+    costo:Number,
+    tua: Number
 },{
     timestamps:true,
     versionKey:false

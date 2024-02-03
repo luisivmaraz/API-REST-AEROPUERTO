@@ -1,15 +1,15 @@
 import { Router } from "express";
 
-import { costoTotal, deleteBoleto, getAllBoletos, getOneBoleto, insertBoleto, menorAmayor, updateBoleto } from "../controllers/boletoControllers.js";
+import { boletoMasCaro, costoTotal, deleteBoleto, getAllBoletos, getOneBoleto, insertBoleto, updateBoleto } from "../controllers/boletoControllers.js";
 const router=Router()
 
 
 router.get('/getAll',getAllBoletos)
-router.get('/getOne/:folio',getOneBoleto)
+router.get('/getOne/:clave',getOneBoleto)
 router.post('/insertBoleto',insertBoleto)
-router.put('/updateBoleto/:folio',updateBoleto)
-router.delete('/deleteBoleto/:folio', deleteBoleto)
-router.get('/menorAmayor',menorAmayor)
+router.put('/updateBoleto/:clave',updateBoleto)
+router.delete('/deleteBoleto/:clave', deleteBoleto)
+router.get('/boletoMasCaro',boletoMasCaro)
 router.get('/costoTotal', costoTotal)
 
 

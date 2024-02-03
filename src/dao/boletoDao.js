@@ -1,9 +1,8 @@
-import Boleto from '../models/boletoModels.js'  //Importa el objeto de models en "Boleto"
+import Boleto from '../models/boletoModels.js'
 
 const C = console.log.bind(console.log)
 const boletoDAO={}
 
-//---------------------------------------------------------------------------
 
 boletoDAO.getAll = async()=>{             //Extraer todos los boletos de la bd
     const boletos=await Boleto.find()
@@ -11,11 +10,10 @@ boletoDAO.getAll = async()=>{             //Extraer todos los boletos de la bd
 }
 
 
-boletoDAO.getOne = async(folioboleto)=>{                 //extraer un boleto por su folio
-    const boleto=await Boleto.findOne({folio:folioboleto})
+boletoDAO.getOne = async(claveboleto)=>{                 //extraer un boleto por su folio
+    const boleto=await Boleto.findOne({clave:claveboleto})
     return boleto
 }
-
 
 
 boletoDAO.insertBoleto=async(boleto)=>{                      //Insertar bolero 
@@ -25,9 +23,8 @@ boletoDAO.insertBoleto=async(boleto)=>{                      //Insertar bolero
 }
 
 
-
-boletoDAO.updateBoleto=async(folioboleto,boleto)=>{        // Actualizar boleto
-        const boletoActualizado=await Boleto.findOneAndUpdate({folio:folioboleto}, boleto )
+boletoDAO.updateBoleto=async(claveboleto,boleto)=>{        // Actualizar boleto
+        const boletoActualizado=await Boleto.findOneAndUpdate({clave:claveboleto}, boleto )
         if(boletoActualizado!=null){
             return true
         }else{
@@ -36,16 +33,13 @@ boletoDAO.updateBoleto=async(folioboleto,boleto)=>{        // Actualizar boleto
     
 }
 
-boletoDAO.deleteBoleto=async(folioboleto)=>{                       //borra4r boleto
-    const boletoBorrado=await Boleto.findOneAndDelete({folio:folioboleto})
+boletoDAO.deleteBoleto=async(claveboleto)=>{                       //borra4r boleto
+    const boletoBorrado=await Boleto.findOneAndDelete({clave:claveboleto})
     if(boletoBorrado!=null){
         return true
     }else{
         return false
     }
 }
-
-
-
 
 export default boletoDAO;
